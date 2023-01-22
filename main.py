@@ -1,5 +1,5 @@
 from typing import Union
-
+import uvicorn
 from fastapi import FastAPI
 
 
@@ -31,3 +31,7 @@ def read_item(element: str, q: Union[str, None] = None):
     else:
         resultTest += parsing_text[0]
     return resultTest
+
+
+if __name__ == "__main__":
+    uvicorn.run("server.api:app", host="0.0.0.0", port=8000, reload=True)
