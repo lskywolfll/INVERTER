@@ -30,4 +30,4 @@ def read_item(element: str, q: Union[str, None] = None):
         print("work")
     else:
         resultTest += parsing_text[0]
-    return resultTest
+    return resultTest.upper()
